@@ -34,9 +34,9 @@ const hasUniqueChars = (str) => {
 //Panagram Sentence
 /* Write a function to check a sentence to see if it is a pangram or not.
  */
-const isPanagram = (string) => {
+const isPanagram = (str) => {
     let alphabet = "abcdefghijklmnopqrstuvwxyz";
-    let strArr = string.toLowerCase();
+    let strArr = str.toLowerCase();
 
     for (let i = 0; i < alphabet.length; i++) {
         if (strArr.indexOf(alphabet[i]) < 0) {
@@ -45,5 +45,22 @@ const isPanagram = (string) => {
     }
     return true;
 }
-console.log(isPanagram('The quick brown fox jumps over the lazy dog!')) //true
-console.log(isPanagram('Is this a panagram? No!')) //false
+// console.log(isPanagram('The quick brown fox jumps over the lazy dog!')) //true
+// console.log(isPanagram('Is this a panagram? No!')) //false
+
+//Logest Word
+/* Write a function, find_longest_word, that takes a list of words and returns the length of the longest one. */
+const findLogestWord = (str) => {
+    const words = str.split(' ');
+    let longestWord = 0;
+    let maxLength = null;
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > maxLength) {
+            maxLength = words[i].length;
+            longestWord = words[i];
+        }
+    }
+return longestWord;
+}
+console.log(findLogestWord('This is a function that returns the longest word which will most likely be Hippopotomonstrosesquippedaliophobia')); //returns longest word which is the fear of long words 
