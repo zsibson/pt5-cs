@@ -1,0 +1,18 @@
+# Computer Science Assessment 7
+
+### extraLargeArray results
+- doublerAppend: 2.237875 ms
+- doublerInsert: 768.146083 ms
+
+|  | tinyArray | smallArray | mediumArray | largeArray|
+| -------- | -------- | -------- | -------- | -------- |
+| doublerAppend | 1.985709 ms | 2.274958 ms | 2.737125 ms | 2.192333 ms |
+| doublerInsert | 773.334334 ms | 767.87525 ms | 767.965458 ms | 768.862375 ms |
+
+### Observation of results
+1. How does each function “scale”? 
+	- The code results are showing that as the input array increases, the time for doublerAppend and doublerInsert also increase. 
+2. How does each function "scale"?
+	- doublerAppend is faster and is more likely to scale better. 
+3. For extra credit, do some review / research on why the slower function is so slow, and summarize the reasoning for this.
+	- doublerInsert is slower because it uses unshift which needs to re-index all of the elements first before it adds a new element. Push is is faster because it only adds elements to the end of the array. 
